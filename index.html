@@ -3,19 +3,47 @@
 <head>
 <title>Oversight</title>
 <script type="text/javascript">
-var a=0;
-var t="";
-function saveCookie(){
-  document.cookie = t;
-};
-function getCookie(){
-  t = document.cookie;
-};
-function refresh(){
+
+var thingy = [];
+var issues = [];
+var PCookie = "";
+var issue;
+
+function setPCookie(cname,cvalue) {
+  PCookie += cname + "=" + cvalue + ";";
+}
+
+function setCookie() {
+    document.cookie = PCookie + "issuenum=" + issue + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie(cname) {
+    var x = getCookie(cname);
+    if (x != "") {
+      if (cname == "issuenum"){
+        document.getElementById("message").innerHTML = issues[x];
+      }
+    } else {
+      
+    }
+}
   
-};
   
-getCookie();
 </script>
 </head>
 <body>
