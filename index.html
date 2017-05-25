@@ -6,19 +6,24 @@
 var a=0;
 var c=document.cookie;
 var t="issue="+a;
-function save(){
-  document.cookie = t;
+function saveCookie(username){
+  document.cookie = t+";username="+username;
 };
 </script>
 </head>
 <body>
 <table>
 <thead>
-<td><h1>Oversight</h1></td>
+  <tr><td><h1>Oversight</h1></td><td><button onClick="">Save</button></td></tr>
 </thead>
 <tbody>
-<tr><td><img src="" /></td><td width="90%" rowspan=7><div id="message" ></div></td></tr>
-
+<tr><td><img width=200 height=200 src="" /></td><td width=800 rowspan=7><div id="message" ></div></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
+<tr><td><img width=200 height=200 src="" /></td></tr>
 </tbody>
 </table>
 </body>
