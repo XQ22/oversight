@@ -4,20 +4,27 @@
 <title>Oversight</title>
 <script type="text/javascript">
 var a=0;
-var c=document.cookie;
-var t="issue="+a;
-function saveCookie(username){
-  document.cookie = t+";username="+username;
+var t="";
+function saveCookie(){
+  document.cookie = t;
 };
+function getCookie(){
+  t = document.cookie;
+};
+function refresh(){
+  
+};
+  
+getCookie();
 </script>
 </head>
 <body>
 <table>
 <thead>
-  <tr><td><h1>Oversight</h1></td><td><button onClick="">Save</button></td></tr>
+<tr><td><h1>Oversight</h1></td><td><button onClick="saveCookie()">Save</button><button onClick="refresh()">Refresh</button></td></tr>
 </thead>
 <tbody>
-<tr><td><img width=200 height=200 src="" /></td><td width=800 rowspan=7><div id="message" ></div></td></tr>
+<tr><td><img width=200 height=200 src="" /></td><td width=800 height=1400 rowspan=7><div id="message" ></div></td></tr>
 <tr><td><img width=200 height=200 src="" /></td></tr>
 <tr><td><img width=200 height=200 src="" /></td></tr>
 <tr><td><img width=200 height=200 src="" /></td></tr>
